@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS todo-list;
+CREATE DATABASE todo-list;

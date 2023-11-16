@@ -1,0 +1,17 @@
+
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    border: solid 2px rgb(167, 161, 161);
+    border-radius: 10px;
+
+    &__field{
+        margin: 10px;
+    }
+
+    &__button{
+        margin: 10px;
+    }
+}

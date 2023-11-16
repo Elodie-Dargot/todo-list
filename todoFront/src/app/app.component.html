@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="container__form">
+      <h1>TODO LIST</h1>
+      <app-create-task></app-create-task>
+  </div>
+
+  <div class="container__aside">
+    <div class="container__aside__status">
+        <h1>Task To Do:</h1>
+            <div *ngFor="let task of tasks" >
+                <h2>{{task.title}}</h2>
+                <p>{{task.description}}</p>
+                <p>{{task.priority}}</p>
+                <p>{{task.status}}</p>
+                <button>Update</button>
+                <button>Delete</button>
+            </div>
+        <p *ngIf="tasks === null">No task</p>
+    </div>
+    <div class="container__aside__status">
+        <h1>Task In Progress:</h1>
+        <p>No task</p>
+    </div>
+    <div class="container__aside__status"> 
+        <h1>Task Done:</h1>
+        <p>No task</p>
+    </div>
+</div>

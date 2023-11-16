@@ -1,0 +1,27 @@
+<form class="form" [formGroup]="taskForm" (ngSubmit)="saveTask(taskForm.value)">
+    <mat-form-field class="form__field" floatLabel="auto">
+        <mat-label>New task</mat-label>
+        <input matInput type="text" class="form-control" formControlName="title" id="title" placeholder="Enter title">
+    </mat-form-field>
+    <mat-form-field class="form__field" floatLabel="auto">
+        <mat-label>Description</mat-label>
+        <textarea matInput class="form-control" formControlName="description" id="description" rows="3"></textarea>
+    </mat-form-field>
+    <mat-form-field class="form__field" floatLabel="auto">
+        <mat-label>Priority</mat-label>
+        <mat-select class="form-control" formControlName="priority" id="priority">
+        <mat-option value="LOW">Low</mat-option>
+        <mat-option value="MEDIUM">Medium</mat-option>
+        <mat-option value="HIGH">High</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="form__field" floatLabel="auto">
+        <mat-label>Status</mat-label>
+        <mat-select class="form-control" formControlName="status" id="status">
+        <mat-option value="TODO">Todo</mat-option>
+        <mat-option value="IN_PROGRESS">In Progress</mat-option>
+        <mat-option value="DONE">Done</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit" class="form__button btn btn-primary">Add a task</button>
+</form>
